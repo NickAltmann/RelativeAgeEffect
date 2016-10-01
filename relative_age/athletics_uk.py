@@ -25,7 +25,7 @@ class Area(object):
 # event labels are readable terms used throughout age-groups, eg SteepleChase, Discus
 # event tags are used in web queries and may be age-group specific eg 1500SC, DT2k
 
-event_groups = {'Sprints': ['100m', '200m', '400m', 'ShortHurdles', 'LongHurdles'],
+event_groups = {'Sprints': ['100m', '200m', '300m', '400m', 'ShortHurdles', 'LongHurdles'],
                 'Distance': ['800m', '1500m', '3000m', 'SteepleChase', '5000m', '10000m'],
                 'Jumps': ['HighJump', 'PoleVault', 'LongJump', 'TripleJump'],
                 'Throws': ['Shot', 'Discus', 'Hammer', 'Javelin']}
@@ -62,6 +62,8 @@ def event_tag_to_event_label(event_tag):
         return "LongHurdles"
     if "H" in event_tag_u:
         return "ShortHurdles"
+    if event_tag == "Mar":
+        return "Mar"
     return "%dm" % int(event_tag_u)
 
 
@@ -70,7 +72,7 @@ events_set = {AgeGroup.Sen: {'M': ['100', '200', '400', '110H', '400H', '800', '
                              'W': ['100', '200', '400', '100HW', '400HW', '800', '1500',  '3000SCW', '5000', '10000',
                                    'HJ', 'PV', 'LJ', 'TJ', 'SP4K', 'DT1K', 'HT4K', 'JT600']},
               AgeGroup.U20: {'M': ['100', '200', '400', '110HU20M', '400H', '800', '1500',  '2000SC', '3000', '5000',
-                                   'HJ', 'PV', 'LJ', 'TJ', 'SP6K', 'DT1.7K', 'HT6K', 'JT800'],
+                                   'HJ', 'PV', 'LJ', 'TJ', 'SP6K', 'DT1.75K', 'HT6K', 'JT800'],
                              'W': ['100', '200', '400', '100HW', '400HW', '800', '1500',  '1500SCW', '3000', '5000',
                                    'HJ', 'PV', 'LJ', 'TJ', 'SP4K', 'DT1K', 'HT4K', 'JT600']},
               AgeGroup.U17: {'M': ['100', '200', '400', '100HU17M', '400HU17M', '800', '1500',  '1500SC', '3000',
@@ -79,7 +81,7 @@ events_set = {AgeGroup.Sen: {'M': ['100', '200', '400', '110H', '400H', '800', '
                                    'HJ', 'PV', 'LJ', 'TJ', 'SP3K', 'DT1K', 'HT3K', 'JT500']},
               AgeGroup.U15: {'M': ['100', '200', '400', '80HU15M', '800', '1500',  '3000',
                                    'HJ', 'PV', 'LJ', 'TJ', 'SP4K', 'DT1.25K', 'HT4K', 'JT600'],
-                             'W': ['100', '200', '400', '75HU15W', '800', '1500', '3000',
+                             'W': ['100', '200', '300', '75HU15W', '800', '1500', '3000',
                                    'HJ', 'PV', 'LJ', 'TJ', 'SP3K', 'DT1K', 'HT3K', 'JT500']},
               AgeGroup.U13: {'M': ['100', '200', '75HU13M', '800', '1500',
                                    'HJ', 'PV', 'LJ', 'TJ', 'SP3.25K', 'DT1K', 'JT400'],
