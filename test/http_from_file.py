@@ -2,12 +2,12 @@ import unittest
 from urlparse import urlparse
 import os
 import requests
-import relative_age.http_access
+import relativeage.http_access
 
 
 class HttpTest(unittest.TestCase):
     def setUp(self):
-        relative_age.http_access.get_hmtl = caching_request
+        relativeage.http_access.get_hmtl = caching_request
 
 
 def caching_request(url, params=None):

@@ -1,5 +1,5 @@
 import http_from_file
-import relative_age.athletics_uk as ath
+import relativeage.athletics_uk as ath
 
 
 class TestAthletics(http_from_file.HttpTest):

@@ -116,5 +116,5 @@ def summary_table(labels, data, start_month):
                                'First half percentage',
                                'First to fourth quarter ratio'],
                       index=labels)
-    
+
     return df.round(2)

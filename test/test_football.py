@@ -1,4 +1,4 @@
-import relative_age.football
+import relativeage.football
 import http_from_file
 
 
@@ -6,7 +6,7 @@ class TestFootball(http_from_file.HttpTest):
 
     def get_squads(self):
 
-        squads = relative_age.football.Squads()
+        squads = relativeage.football.Squads()
         return squads
 
     def test_list_countries(self):
