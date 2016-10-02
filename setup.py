@@ -9,6 +9,6 @@ setup(name='relativeage',
       license='MIT',
       packages=['relativeage'],
       install_requires=[
-          'scipy', 'beautifulsoup4', 'pandas', 'requests', 'lxml'
+          'scipy', 'beautifulsoup4', 'pandas', 'requests', 'lxml', 'matplotlib', 'html5lib', 'pillow'
       ],
       zip_safe=True)
